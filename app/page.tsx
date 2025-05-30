@@ -37,7 +37,7 @@ export default function Home() {
     <div className="min-h-screen bg-zinc-950 text-zinc-100 p-8 md:p-16 lg:p-24 pb-16">
       <div className="max-w-2xl mx-auto space-y-8">
         {/* Header */}
-        <SlideIn>
+        <>
           <div className="space-y-2">
             <h1
               className="text-4xl md:text-5xl font-mono tracking-tight"
@@ -50,11 +50,11 @@ export default function Home() {
             </h1>
             <p className="text-zinc-400 font-mono text-sm">Waterloo, CAN {currentTime}</p>
           </div>
-        </SlideIn>
+        </>
 
         {/* Main Content */}
         <div className="space-y-6 text-lg md:text-xl leading-relaxed">
-          <SlideIn delay={100}>
+          <>
             <p>
               I'm a 20 year old developer and problem-solver based in Waterloo, CAN. Currently working at{" "}
               <a
@@ -72,16 +72,16 @@ export default function Home() {
               </a>{" "}
               on weekends.
             </p>
-          </SlideIn>
+          </>
 
-          <SlideIn delay={200}>
+          <>
             <p>
               I'm passionate about creating digital experiences that feel intuitive, delightful, and meaningful. When
               I'm not designing, you'll find me exploring new coffee shops or hiking the Bay Area trails.
             </p>
-          </SlideIn>
+          </>
 
-          <SlideIn delay={300}>
+          <>
             <p>
               Always excited to connect with fellow creators;{" "}
               <a
@@ -99,11 +99,15 @@ export default function Home() {
               </a>
               .
             </p>
-          </SlideIn>
+          </>
         </div>
 
         {/* Projects Section */}
-        <SlideIn delay={400}>
+        <>
+        <br />
+        <br />
+        <br />
+
           <div className="space-y-4">
             <h2
               className="text-2xl md:text-3xl font-mono text-zinc-300 underline decoration-zinc-600 underline-offset-8"
@@ -155,10 +159,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </SlideIn>
+        </>
 
         {/* Blog Section */}
-        <SlideIn delay={500}>
+        <>
+        <br />
+        <br />
+        <br />
+
           <div className="space-y-4">
             <h2
               className="text-2xl md:text-3xl font-mono text-zinc-300 underline decoration-zinc-600 underline-offset-8"
@@ -201,15 +209,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </SlideIn>
+        </>
 
         {/* Divider */}
-        <SlideIn delay={600}>
+        <>
           <div className="border-t border-zinc-800 my-8"></div>
-        </SlideIn>
+        </>
 
         {/* Social Links */}
-        <SlideIn delay={700}>
+        <>
           <div className="flex gap-6 text-sm font-mono">
             <a
               href="#"
@@ -236,7 +244,7 @@ export default function Home() {
               GITHUB
             </a>
           </div>
-        </SlideIn>
+        </>
       </div>
     </div>
   )
