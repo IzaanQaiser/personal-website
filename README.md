@@ -1,8 +1,8 @@
 ## Izaan Qaiser Website (NOT COMPLETE)
-**to run:**<br>
-1. `git clone https://github.com/IzaanQaiser/personal-website` <br>
-2. `cd personal-website`
+**To Run:**<br>
+1. Clone repository: `git clone https://github.com/IzaanQaiser/personal-website` <br>
+2. Change directory: `cd personal-website`
 3. Make sure you have [Node.js (LTS)](https://nodejs.org/) installed. <br>
-4. `npm install` <br>
-5. if you run into dependency issues: `npm install --legacy-peer-deps`<br>
-6. to run: `npm run dev`
+4. Dependencies: `npm install` <br>
+5. If you run into dependency issues: `npm install --legacy-peer-deps`<br>
+6. Run: `npm run dev`
