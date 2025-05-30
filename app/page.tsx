@@ -28,26 +28,26 @@ export default function Home() {
       <div className="max-w-2xl mx-auto space-y-8">
         {/* Header */}
         <div className="space-y-2">
-          <h1 className="text-4xl md:text-5xl font-light tracking-tight">Maya Chen</h1>
-          <p className="text-zinc-400 font-mono text-sm">San Francisco, CA {currentTime}</p>
+          <h1 className="text-4xl md:text-5xl font-mono tracking-tight">Izaan Qaiser</h1>
+          <p className="text-zinc-400 font-mono text-sm">Waterloo, CAN {currentTime}</p>
         </div>
 
         {/* Main Content */}
         <div className="space-y-6 text-lg md:text-xl leading-relaxed">
           <p>
-            I'm a 24 year old product designer and creative technologist based in San Francisco. Currently designing at{" "}
+            I'm a 20 year old developer and problem-solver based in Waterloo, CAN. Currently working at{" "}
             <a
               href="#"
               className="underline decoration-zinc-600 hover:decoration-zinc-400 transition-colors duration-200 underline-offset-4"
             >
-              STRIPE
+              VIRTEK VISION
             </a>{" "}
             and building{" "}
             <a
               href="#"
               className="underline decoration-zinc-600 hover:decoration-zinc-400 transition-colors duration-200 underline-offset-4"
             >
-              MOONLIGHT
+              THINKBACK.AI
             </a>{" "}
             on weekends.
           </p>
