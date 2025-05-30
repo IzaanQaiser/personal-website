@@ -43,7 +43,7 @@ export default function Home() {
               className="text-4xl md:text-5xl font-mono tracking-tight"
               style={{
                 textShadow:
-                  "0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.3), 0 0 90px rgba(255, 255, 255, 0.1)",
+                  "0 0 15px rgba(255, 255, 255, 0.6), 0 0 90px rgba(255, 255, 255, 0.3), 0 0 90px rgba(255, 255, 255, 0.1)",
               }}
             >
               Izaan Qaiser
