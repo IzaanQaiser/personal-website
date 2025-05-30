@@ -4,7 +4,16 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  cursor: cell;
 }
+
+html, body {
+  background-color: #09090b;  /* or whatever dark color you want */
+  overscroll-behavior: none;
+  height: 100%;
+  margin: 0;
+}
+
 
 @layer utilities {
   .text-balance {
