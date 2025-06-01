@@ -6,3 +6,5 @@
 4. Dependencies: `npm install` <br>
 5. If you run into dependency issues: `npm install --legacy-peer-deps`<br>
 6. Run: `npm run dev`
+
+turn into chatgpt wrapper(?)
