@@ -34,13 +34,13 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 p-8 md:p-16 lg:p-24 pb-16">
+    <div className="min-h-screen bg-zinc-950 text-zinc-100 p-8 md:p-8 lg:p-16 pb-16">
       <div className="max-w-2xl mx-auto space-y-8">
         {/* Header */}
-        <>
-          <div className="space-y-2">
+        <div className="flex justify-center">
+          <div>
             <h1
-              className="text-4xl md:text-5xl font-mono tracking-tight"
+              className="text-4xl md:text-5xl font-mono tracking-tight mb-4 mt-1"
               style={{
                 textShadow:
                   "0 0 15px rgba(255, 255, 255, 0.6), 0 0 90px rgba(255, 255, 255, 0.3), 0 0 90px rgba(255, 255, 255, 0.1)",
@@ -48,15 +48,17 @@ export default function Home() {
             >
               Izaan Qaiser
             </h1>
+            <div className="flex justify-center">
             <p className="text-zinc-400 font-mono text-sm">Waterloo, CAN {currentTime}</p>
+            </div>
           </div>
-        </>
+        </div>
 
         {/* Main Content */}
         <div className="space-y-6 text-lg md:text-xl leading-relaxed">
           <>
             <p>
-              I'm a 20 year old developer and problem-solver based in Waterloo, CAN. Currently working at{" "}
+              I'm a 20 year old Computer Engineering student at the University of Waterloo. I'm currently working as a Software Developerat{" "}
               <a
                 href="#"
                 className="underline decoration-zinc-600 hover:decoration-blue-900 hover:text-blue-900 transition-colors duration-200 underline-offset-4"
@@ -74,7 +76,7 @@ export default function Home() {
             </p>
           </>
 
-          <>
+          {/* <>
             <p>
               I'm passionate about creating digital experiences that feel intuitive, delightful, and meaningful. When
               I'm not designing, you'll find me exploring new coffee shops or hiking the Bay Area trails.
@@ -99,18 +101,17 @@ export default function Home() {
               </a>
               .
             </p>
-          </>
+          </> */}
         </div>
 
         {/* Projects Section */}
         <>
         <br />
         <br />
-        <br />
 
-          <div className="space-y-4">
+          <div>
             <h2
-              className="text-2xl md:text-3xl font-mono text-zinc-300 underline decoration-zinc-600 underline-offset-8"
+              className="text-2xl md:text-3xl font-mono text-zinc-300 underline decoration-zinc-600 underline-offset-8 mb-6"
               style={{
                 textShadow:
                   "0 0 25px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.3), 0 0 75px rgba(255, 255, 255, 0.1)",
@@ -165,11 +166,10 @@ export default function Home() {
         <>
         <br />
         <br />
-        <br />
 
-          <div className="space-y-4">
+          <div>
             <h2
-              className="text-2xl md:text-3xl font-mono text-zinc-300 underline decoration-zinc-600 underline-offset-8"
+              className="text-2xl md:text-3xl font-mono text-zinc-300 underline decoration-zinc-600 underline-offset-8 mb-6"
               style={{
                 textShadow:
                   "0 0 25px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.3), 0 0 75px rgba(255, 255, 255, 0.1)",
@@ -218,7 +218,7 @@ export default function Home() {
 
         {/* Social Links */}
         <>
-          <div className="flex gap-6 text-sm font-mono">
+          <div className="flex justify-center gap-6 text-sm font-mono">
             <a
               href="#"
               className="text-zinc-400 hover:text-blue-900 underline decoration-zinc-700 hover:decoration-blue-900 transition-colors duration-200 underline-offset-4"
