@@ -154,6 +154,11 @@ export default function Home() {
                           ))}
                         </div>
                       </div>
+                      <div className="ml-2 mb-2">
+                        <p className="text-zinc-500 text-xs font-mono">
+                          {project.technologies.join(' • ')}
+                        </p>
+                      </div>
                       <p className="text-zinc-400 text-sm">{project.description}</p>
                     </div>
                     <span className="text-zinc-500 text-xs font-mono ml-4">{project.year}</span>

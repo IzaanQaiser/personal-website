@@ -93,25 +93,15 @@ export default function ProjectsPage() {
                   </div>
                 </div>
                 
+                <div className="ml-2 mb-3">
+                  <p className="text-zinc-500 text-xs font-mono">
+                    {project.technologies.join(' • ')}
+                  </p>
+                </div>
+                
                 <p className="text-zinc-400 text-sm mb-4 leading-relaxed">
                   {project.description}
                 </p>
-                
-                <div className="flex flex-wrap gap-1 mb-4">
-                  {project.technologies.slice(0, 3).map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-1 bg-zinc-800 text-zinc-300 text-xs font-mono rounded"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <span className="px-2 py-1 bg-zinc-800 text-zinc-500 text-xs font-mono rounded">
-                      +{project.technologies.length - 3} more
-                    </span>
-                  )}
-                </div>
                 
                 <div className="flex items-center justify-between text-xs text-zinc-500 font-mono">
                   <span>{project.year}</span>
