@@ -65,21 +65,25 @@ export default function Home() {
         <div className="space-y-6 text-lg md:text-xl leading-relaxed">
           <>
             <p>
-              I'm a 20 year old Computer Engineering student at the University of Waterloo. I'm currently working as a Software Developerat{" "}
+              I'm a 2nd year Computer Engineering student at the University of Waterloo, currently building{" "}
               <a
-                href="#"
+                href="https://thinkback.ai"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="underline decoration-zinc-600 hover:decoration-blue-900 hover:text-blue-900 transition-colors duration-200 underline-offset-4"
               >
-                VIRTEK VISION
+                thinkback
               </a>{" "}
-              and building{" "}
+              and{" "}
               <a
-                href="#"
+                href="https://speedthreads.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="underline decoration-zinc-600 hover:decoration-blue-900 hover:text-blue-900 transition-colors duration-200 underline-offset-4"
               >
-                THINKBACK.AI
+                speedthreads
               </a>{" "}
-              on weekends.
+              — two future unicorn startups that I'm excited to see grow.
             </p>
           </>
 
@@ -174,7 +178,7 @@ export default function Home() {
           </div>
         </>
 
-        {/* Blog Section */}
+        {/* Experience Section */}
         <>
         <br />
         <br />
@@ -187,37 +191,57 @@ export default function Home() {
                   "0 0 25px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.3), 0 0 75px rgba(255, 255, 255, 0.1)",
               }}
             >
-              Recent Thoughts
+              Experience
             </h2>
-            <div className="space-y-3">
-              <div className="flex justify-between items-start">
-                <Link
-                  href="/blog/building-with-constraints"
-                  className="text-zinc-100 hover:text-blue-900 transition-colors duration-200 underline decoration-zinc-600 hover:decoration-blue-900 underline-offset-4"
-                >
-                  Building with constraints
-                </Link>
-                <span className="text-zinc-500 text-xs font-mono">Dec 2024</span>
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="text-zinc-100 font-mono text-lg">Software Engineer</h3>
+                    <p className="text-zinc-400 text-sm">Virtek Vision International</p>
+                  </div>
+                  <span className="text-zinc-500 text-xs font-mono">May 2025 – Aug 2025</span>
+                </div>
+                <p className="text-zinc-500 text-xs font-mono">Technologies: React Native, TypeScript, JavaScript, C#, RabbitMQ, REST API, SQL, Playwright</p>
+                <p className="text-zinc-400 text-sm">Rebuilt prototype into stable cross-platform app, reducing crashes by 95% for F1 and BMW.</p>
               </div>
 
-              <div className="flex justify-between items-start">
-                <Link
-                  href="/blog/minimal-design"
-                  className="text-zinc-100 hover:text-blue-900 transition-colors duration-200 underline decoration-zinc-600 hover:decoration-blue-900 underline-offset-4"
-                >
-                  The art of minimal design
-                </Link>
-                <span className="text-zinc-500 text-xs font-mono">Nov 2024</span>
+              <div className="space-y-2">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="text-zinc-100 font-mono text-lg">Data Engineer</h3>
+                    <p className="text-zinc-400 text-sm">Definity</p>
+                  </div>
+                  <span className="text-zinc-500 text-xs font-mono">Sep 2024 – Dec 2024</span>
+                </div>
+                <p className="text-zinc-500 text-xs font-mono">Technologies: Python, Airflow, BigQuery, Google Cloud</p>
+                <p className="text-zinc-400 text-sm">Engineered optimized DAG reducing pipeline latency by 91% and increased data throughput by 3x.</p>
               </div>
 
-              <div className="flex justify-between items-start">
-                <Link
-                  href="/blog/terminal-workflows"
-                  className="text-zinc-100 hover:text-blue-900 transition-colors duration-200 underline decoration-zinc-600 hover:decoration-blue-900 underline-offset-4"
-                >
-                  Why I switched to terminal workflows
-                </Link>
-                <span className="text-zinc-500 text-xs font-mono">Oct 2024</span>
+              <div className="space-y-2">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="text-zinc-100 font-mono text-lg">Data Analyst</h3>
+                    <p className="text-zinc-400 text-sm">University of Waterloo</p>
+                  </div>
+                  <span className="text-zinc-500 text-xs font-mono">Jan 2024 – Apr 2024</span>
+                </div>
+                <p className="text-zinc-500 text-xs font-mono">Technologies: Python, Pandas, numpy, JavaScript</p>
+                <p className="text-zinc-400 text-sm">Built Python data pipeline achieving 23.5x speedup and optimized website cutting load times by 59%.</p>
+              </div>
+
+              <div className="space-y-2">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h3 className="text-zinc-100 font-mono text-lg">AI Developer</h3>
+                    <p className="text-zinc-400 text-sm">Outlier</p>
+                  </div>
+                  <span className="text-zinc-500 text-xs font-mono">Nov 2024 – Present</span>
+                </div>
+                <p className="text-zinc-500 text-xs font-mono">Technologies: AI/ML, Python, C#, Machine Learning</p>
+                <p className="text-zinc-400 text-sm">Developing AI solutions and machine learning models for various applications in a remote contract role.
+
+</p>
               </div>
             </div>
           </div>
@@ -232,28 +256,42 @@ export default function Home() {
         <>
           <div className="flex justify-center gap-6 text-sm font-mono">
             <a
-              href="#"
+              href="https://x.com/1zaanq"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-zinc-400 hover:text-blue-900 underline decoration-zinc-700 hover:decoration-blue-900 transition-colors duration-200 underline-offset-4"
             >
-              TWITTER
+              TWITTER/X
             </a>
             <a
-              href="#"
-              className="text-zinc-400 hover:text-blue-900 underline decoration-zinc-700 hover:decoration-blue-900 transition-colors duration-200 underline-offset-4"
-            >
-              DRIBBBLE
-            </a>
-            <a
-              href="#"
+              href="https://www.linkedin.com/in/izaanq/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-zinc-400 hover:text-blue-900 underline decoration-zinc-700 hover:decoration-blue-900 transition-colors duration-200 underline-offset-4"
             >
               LINKEDIN
             </a>
             <a
-              href="#"
+              href="https://github.com/IzaanQaiser"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-zinc-400 hover:text-blue-900 underline decoration-zinc-700 hover:decoration-blue-900 transition-colors duration-200 underline-offset-4"
             >
               GITHUB
+            </a>
+          </div>
+        </>
+
+        {/* Website Inspiration */}
+        <>
+          <div className="flex justify-center mt-8">
+            <a
+              href="https://roozbehali.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-500 hover:text-zinc-300 text-xs font-mono transition-colors duration-200"
+            >
+              website inspiration
             </a>
           </div>
         </>

@@ -21,6 +21,10 @@ export type ProjectType =
   | 'EDUCATIONAL'
   | 'TOOLS'
   | 'DATA'
+  | 'GAME DEVELOPMENT'
+  | 'CHROME EXTENSION'
+  | 'WEB'
+  | 'REAL-TIME'
 
 // Uniform deep navy blue styling for all project tags
 export const projectTagStyle = {
@@ -43,7 +47,7 @@ export const projects: Project[] = [
     id: 'speedthreads',
     name: 'SPEEDTHREADS',
     description: 'Train AI on any Reddit/X post, ask questions, and learn interactively with context-aware summaries.',
-    types: ['AI/ML', 'FULLSTACK'],
+    types: ['AI/ML', 'FULLSTACK', 'CHROME EXTENSION'],
     githubUrl: 'https://github.com/IzaanQaiser/speed-threads',
     year: 2025,
     technologies: ['Python', 'React', 'TypeScript', 'JavaScript', 'GCP', 'Supabase', 'MongoDB'],
@@ -53,10 +57,10 @@ export const projects: Project[] = [
     id: 'chatapp',
     name: 'CHATAPP',
     description: 'A full-stack MERN chat app featuring real-time messaging with Socket.IO, secure user authentication, and a responsive Tailwind UI.',
-    types: ['FULLSTACK'],
+    types: ['FULLSTACK', 'REAL-TIME'],
     githubUrl: 'https://github.com/IzaanQaiser/MERN-Chat-Application',
     year: 2024,
-    technologies: ['React', 'TypeScript', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Socket.IO'],
+    technologies: ['React', 'TypeScript', 'Express', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Socket.IO'],
     featured: true
   },
   {
@@ -91,32 +95,32 @@ export const projects: Project[] = [
   },
   {
     id: 'dotnet-tetris',
-    name: '.NET TETRIS',
+    name: 'TERRIFIC TETRIS',
     description: 'Classic Tetris game built with C# and .NET framework',
-    types: ['DESKTOP', 'EDUCATIONAL'],
+    types: ['GAME DEVELOPMENT'],
     githubUrl: 'https://github.com/IzaanQaiser/.NET-Tetris',
     year: 2023,
-    technologies: ['C#', '.NET', 'Game Development'],
+    technologies: ['C#', '.NET', 'WPF'],
     featured: false
   },
   {
     id: 'personal-website',
     name: 'PERSONAL WEBSITE',
     description: 'Minimal personal website built with Next.js and TypeScript',
-    types: ['FRONTEND'],
+    types: ['WEB'],
     githubUrl: 'https://github.com/IzaanQaiser/personal-website',
-    year: 2024,
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    year: 2025,
+    technologies: ['Next.js', 'TypeScript', 'Tailwind'],
     featured: false
   },
   {
     id: 'homie-hub',
     name: 'HOMIE HUB',
     description: 'Social platform for connecting with friends and sharing experiences',
-    types: ['FULLSTACK', 'FRONTEND'],
+    types: ['FULLSTACK', 'WEB', 'REAL-TIME'],
     githubUrl: 'https://github.com/IzaanQaiser/Homie-Hub',
     year: 2022,
-    technologies: ['JavaScript', 'HTML', 'CSS'],
+    technologies: ['HTML', 'CSS', 'JS', 'Agora'],
     featured: false
   },
   {
@@ -133,30 +137,30 @@ export const projects: Project[] = [
     id: 'mlh-website',
     name: 'MLH WEBSITE',
     description: 'HTML5 canvas boilerplate with ES6 and live-reloading with BrowserSync',
-    types: ['TOOLS', 'FRONTEND'],
+    types: ['WEB'],
     githubUrl: 'https://github.com/IzaanQaiser/MLH-Website',
     year: 2022,
-    technologies: ['HTML5', 'Canvas', 'ES6', 'BrowserSync'],
+    technologies: ['HTML', 'CSS', 'JS', 'Canvas'],
     featured: false
   },
   {
     id: 'buddy-better-study',
     name: 'BUDDY BETTER STUDY',
     description: 'Study companion application for better learning and productivity',
-    types: ['EDUCATIONAL', 'FRONTEND'],
+    types: ['CHROME EXTENSION', 'WEB'],
     githubUrl: 'https://github.com/IzaanQaiser/buddybetterstuddy',
     year: 2022,
-    technologies: ['CSS', 'HTML', 'JavaScript'],
+    technologies: ['HTML', 'CSS', 'JS', 'JSON'],
     featured: false
   },
   {
     id: 'delta-blade',
     name: 'DELTA BLADE',
     description: 'Game development project built with C#',
-    types: ['DESKTOP', 'EDUCATIONAL'],
+    types: ['GAME DEVELOPMENT'],
     githubUrl: 'https://github.com/IzaanQaiser/DeltaBlade',
     year: 2022,
-    technologies: ['C#', 'Game Development'],
+    technologies: ['C#', 'Godot'],
     featured: false
   }
 ]

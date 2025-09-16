@@ -19,7 +19,7 @@ export default function ProjectsPage() {
         <div className="flex justify-center">
           <div>
             <h1
-              className="text-4xl md:text-5xl font-mono tracking-tight mb-4 mt-1"
+              className="text-4xl md:text-5xl font-mono tracking-tight mb-4 mt-1 text-center"
               style={{
                 textShadow:
                   "0 0 15px rgba(255, 255, 255, 0.6), 0 0 90px rgba(255, 255, 255, 0.3), 0 0 90px rgba(255, 255, 255, 0.1)",
@@ -65,20 +65,37 @@ export default function ProjectsPage() {
         {/* Projects Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project) => {
+            const isHackathonWinner = project.id === 'buddy-better-study' || project.id === 'mlh-website' || project.id === 'homie-hub'
             return (
               <div
                 key={project.id}
-                className="bg-zinc-900/30 border border-zinc-800 rounded-lg p-6 hover:border-zinc-700 transition-colors duration-200"
+                onClick={() => window.open(project.githubUrl, '_blank')}
+                className={`cursor-pointer bg-zinc-900/30 border rounded-lg p-6 transition-colors duration-200 ${
+                  isHackathonWinner 
+                    ? 'border-yellow-500/50 hover:border-yellow-400/70 shadow-lg shadow-yellow-500/10' 
+                    : 'border-zinc-800 hover:border-zinc-700'
+                }`}
+                style={isHackathonWinner ? {
+                  boxShadow: '0 0 20px rgba(255, 215, 0, 0.1), 0 0 40px rgba(255, 215, 0, 0.05), inset 0 1px 0 rgba(255, 215, 0, 0.1)'
+                } : {}}
               >
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-mono text-zinc-100">
+                <div className="mb-3">
+                  <h3 className="text-lg font-mono text-zinc-100 mb-2">
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-blue-900 transition-colors duration-200"
+                      className={`transition-colors duration-200 ${
+                        isHackathonWinner 
+                          ? 'hover:text-yellow-400' 
+                          : 'hover:text-blue-900'
+                      }`}
+                      style={isHackathonWinner ? {
+                        textShadow: '0 0 10px rgba(255, 215, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.1)'
+                      } : {}}
                     >
                       {project.name}
+                      {isHackathonWinner && <span className="ml-2 text-yellow-400">🏆</span>}
                     </a>
                   </h3>
                   <div className="flex gap-1 flex-wrap">
@@ -116,6 +133,13 @@ export default function ProjectsPage() {
                     </a>
                   )}
                 </div>
+                {isHackathonWinner && (
+                  <div className="flex justify-center mt-2">
+                    <span className="text-xs text-yellow-400 font-mono">
+                      HACKATHON WINNER
+                    </span>
+                  </div>
+                )}
               </div>
             )
           })}
