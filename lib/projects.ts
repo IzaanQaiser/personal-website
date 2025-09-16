@@ -30,33 +30,43 @@ export const projectTagStyle = {
 
 export const projects: Project[] = [
   {
-    id: 'thinkback-ai',
-    name: 'THINKBACK.AI',
-    description: 'AI-powered content management system for personal growth and reflection',
+    id: 'thinkback',
+    name: 'THINKBACK',
+    description: 'Make your doomscrolling productive. Save and recall your favourite social media content with AI.',
     types: ['AI/ML', 'FULLSTACK'],
     githubUrl: 'https://github.com/IzaanQaiser/thinkback-ai',
-    year: 2024,
-    technologies: ['Python', 'AI/ML', 'Content Management'],
+    year: 2025,
+    technologies: ['Python', 'React', 'TypeScript', 'GCP', 'Firebase'],
     featured: true
   },
   {
-    id: 'speed-threads',
-    name: 'SPEED THREADS',
-    description: 'Save time summarizing Reddit and X (Twitter) threads using AI',
-    types: ['AI/ML', 'FRONTEND'],
+    id: 'speedthreads',
+    name: 'SPEEDTHREADS',
+    description: 'Train AI on any Reddit/X post, ask questions, and learn interactively with context-aware summaries.',
+    types: ['AI/ML', 'FULLSTACK'],
     githubUrl: 'https://github.com/IzaanQaiser/speed-threads',
-    year: 2024,
-    technologies: ['JavaScript', 'AI', 'Web Scraping'],
+    year: 2025,
+    technologies: ['Python', 'React', 'TypeScript', 'JavaScript', 'GCP', 'Supabase', 'MongoDB'],
     featured: true
   },
   {
-    id: 'mern-chat',
-    name: 'MERN CHAT APP',
-    description: 'Real-time chat application built with MongoDB, Express, React, and Node.js',
-    types: ['FULLSTACK', 'FRONTEND'],
+    id: 'chatapp',
+    name: 'CHATAPP',
+    description: 'A full-stack MERN chat app featuring real-time messaging with Socket.IO, secure user authentication, and a responsive Tailwind UI.',
+    types: ['FULLSTACK'],
     githubUrl: 'https://github.com/IzaanQaiser/MERN-Chat-Application',
     year: 2024,
-    technologies: ['MongoDB', 'Express', 'React', 'Node.js', 'Socket.io'],
+    technologies: ['React', 'TypeScript', 'Express.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Socket.IO'],
+    featured: true
+  },
+  {
+    id: 'nlp-chatbot',
+    name: 'IZAAN\'S NLP CHATBOT',
+    description: 'Interactive web chatbot using Cohere AI. Flask backend with modern Bootstrap UI for seamless chatting.',
+    types: ['AI/ML', 'FULLSTACK'],
+    githubUrl: 'https://github.com/IzaanQaiser/nlp-chatbot',
+    year: 2024,
+    technologies: ['Python', 'Flask', 'JavaScript', 'Cohere', 'Bootstrap'],
     featured: true
   },
   {
@@ -67,16 +77,6 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/IzaanQaiser/AI-FACE-DETECTION',
     year: 2024,
     technologies: ['Python', 'OpenCV', 'Machine Learning', 'Computer Vision'],
-    featured: false
-  },
-  {
-    id: 'nlp-chatbot',
-    name: 'NLP CHATBOT',
-    description: 'Natural language processing chatbot for intelligent conversations',
-    types: ['AI/ML', 'FRONTEND'],
-    githubUrl: 'https://github.com/IzaanQaiser/nlp-chatbot',
-    year: 2024,
-    technologies: ['HTML', 'JavaScript', 'NLP', 'AI'],
     featured: false
   },
   {
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/IzaanQaiser/personal-website',
     year: 2024,
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-    featured: true
+    featured: false
   },
   {
     id: 'homie-hub',
