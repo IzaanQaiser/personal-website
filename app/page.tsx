@@ -184,15 +184,25 @@ export default function Home() {
         <br />
 
           <div>
-            <h2
-              className="text-2xl md:text-3xl font-mono text-zinc-300 underline decoration-zinc-600 underline-offset-8 mb-6"
-              style={{
-                textShadow:
-                  "0 0 25px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.3), 0 0 75px rgba(255, 255, 255, 0.1)",
-              }}
-            >
-              Experience
-            </h2>
+            <div className="flex items-center justify-between mb-6">
+              <h2
+                className="text-2xl md:text-3xl font-mono text-zinc-300 underline decoration-zinc-600 underline-offset-8"
+                style={{
+                  textShadow:
+                    "0 0 25px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.3), 0 0 75px rgba(255, 255, 255, 0.1)",
+                }}
+              >
+                Experience
+              </h2>
+              <a
+                href="https://www.linkedin.com/in/izaanq/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-500 hover:text-blue-900 transition-colors duration-200 underline decoration-zinc-700 hover:decoration-blue-900 underline-offset-4 text-sm font-mono"
+              >
+                View All →
+              </a>
+            </div>
             <div className="space-y-6">
               <div className="space-y-2">
                 <div className="flex justify-between items-start">
