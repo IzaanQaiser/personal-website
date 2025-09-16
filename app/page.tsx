@@ -129,7 +129,7 @@ export default function Home() {
                 View All →
               </Link>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-8">
               {featuredProjects.map((project) => {
                 return (
                   <div key={project.id} className="flex justify-between items-start">
