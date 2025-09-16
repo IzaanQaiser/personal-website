@@ -207,7 +207,7 @@ export default function Home() {
               <div className="space-y-2">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="text-zinc-100 font-mono text-lg">Software Engineer</h3>
+                    <h3 className="text-zinc-100 font-mono text-lg">Full-Stack Developer</h3>
                     <p className="text-zinc-400 text-sm">Virtek Vision International</p>
                   </div>
                   <span className="text-zinc-500 text-xs font-mono">May 2025 – Aug 2025</span>
