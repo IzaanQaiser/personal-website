@@ -1,6 +1,7 @@
 "use client"
 
 import { SlideIn } from "@/components/slide-in"
+import { AchievementsCarousel } from "@/components/achievements-carousel"
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { getFeaturedProjects, projectTagStyle, type Project } from "@/lib/projects"
@@ -36,8 +37,12 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 p-8 md:p-8 lg:p-16 pb-16">
-      <div className="max-w-2xl mx-auto space-y-8">
+    <div className="min-h-screen bg-zinc-950 text-zinc-100">
+      {/* Achievements Carousel Banner */}
+      <AchievementsCarousel />
+      
+      <div className="p-8 md:p-8 lg:p-16 pb-16">
+        <div className="max-w-2xl mx-auto space-y-8">
         {/* Header */}
         <div className="flex justify-center">
           <div>
@@ -252,6 +257,7 @@ export default function Home() {
             </a>
           </div>
         </>
+        </div>
       </div>
     </div>
   )
