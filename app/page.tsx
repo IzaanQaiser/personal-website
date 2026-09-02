@@ -7,7 +7,7 @@ import { getFeaturedProjects, getProjectPrimaryUrl, projectTagStyle } from "@/li
 
 const experiences = [
   {
-    title: "Incoming Software Developer",
+    title: "Software Developer (Incoming)",
     organization: "Knowledge in Development Inc. / Language Use Inventory",
     dates: "Sep 2026 – Dec 2026",
     technologies: "JavaScript • HTML/CSS • client-side web • accessibility • software architecture",
