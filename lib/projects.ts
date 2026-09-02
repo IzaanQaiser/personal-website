@@ -3,14 +3,17 @@ export interface Project {
   name: string
   description: string
   types: ProjectType[]
-  githubUrl: string
+  githubUrl?: string
+  devpostUrl?: string
   liveUrl?: string
   year: number
   technologies: string[]
   featured?: boolean
+  hackathonWinner?: boolean
+  status?: 'IN DEVELOPMENT'
 }
 
-export type ProjectType = 
+export type ProjectType =
   | 'AI/ML'
   | 'FULLSTACK'
   | 'FRONTEND'
@@ -26,7 +29,6 @@ export type ProjectType =
   | 'WEB'
   | 'REAL-TIME'
 
-// Uniform deep navy blue styling for all project tags
 export const projectTagStyle = {
   color: 'text-blue-400',
   bgColor: 'bg-blue-900/20 border-blue-900/30'
@@ -34,143 +36,133 @@ export const projectTagStyle = {
 
 export const projects: Project[] = [
   {
+    id: 'ock',
+    name: 'OCK',
+    description: 'A screen-aware, voice-first AI teaching assistant that uses course materials, live screen context, and multimodal models to answer questions while you work.',
+    types: ['AI/ML', 'DESKTOP', 'TOOLS'],
+    devpostUrl: 'https://devpost.com/software/ock',
+    year: 2026,
+    technologies: ['Gemini', 'ElevenLabs', 'Swift', 'Wispr'],
+    featured: true
+  },
+  {
     id: 'thinkback',
     name: 'THINKBACK',
-    description: 'Make your doomscrolling productive. Save and recall your favourite social media content with AI.',
+    description: 'An AI knowledge-capture system for saving articles, videos, and social content, then transcribing, summarizing, embedding, and rediscovering it through semantic search.',
     types: ['AI/ML', 'FULLSTACK'],
     githubUrl: 'https://github.com/IzaanQaiser/thinkback-ai',
     year: 2025,
-    technologies: ['Python', 'React', 'TypeScript', 'GCP', 'Firebase'],
+    technologies: ['React', 'TypeScript', 'Python', 'FastAPI', 'Firebase', 'GCP', 'OpenAI API', 'Docker'],
     featured: true
   },
   {
     id: 'speedthreads',
     name: 'SPEEDTHREADS',
-    description: 'Train AI on any Reddit/X post, ask questions, and learn interactively with context-aware summaries.',
+    description: 'A browser extension and FastAPI backend for analyzing live Reddit and social threads with streaming responses and bounded LLM tool-calling workflows.',
     types: ['AI/ML', 'FULLSTACK', 'CHROME EXTENSION'],
     githubUrl: 'https://github.com/IzaanQaiser/speed-threads',
     year: 2025,
-    technologies: ['Python', 'React', 'TypeScript', 'JavaScript', 'GCP', 'Supabase', 'MongoDB'],
+    technologies: ['React', 'TypeScript', 'Chrome MV3', 'Python', 'FastAPI', 'PostgreSQL', 'Supabase', 'OpenAI API'],
     featured: true
   },
   {
-    id: 'chatapp',
-    name: 'CHATAPP',
-    description: 'A full-stack MERN chat app featuring real-time messaging with Socket.IO, secure user authentication, and a responsive Tailwind UI.',
-    types: ['FULLSTACK', 'REAL-TIME'],
-    githubUrl: 'https://github.com/IzaanQaiser/MERN-Chat-Application',
-    year: 2024,
-    technologies: ['React', 'TypeScript', 'Express', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Socket.IO'],
-    featured: true
+    id: 'bet',
+    name: 'BET',
+    description: 'A capacity-aware obligation engine that turns SMS and MMS input into structured tasks, calendar actions, reminders, and timely suggestions through a durable service pipeline.',
+    types: ['AI/ML', 'SYSTEMS', 'TOOLS'],
+    githubUrl: 'https://github.com/IzaanQaiser/bet',
+    year: 2026,
+    technologies: ['Python', 'FastAPI', 'PostgreSQL', 'pgvector', 'GCP', 'Twilio', 'Gemini', 'Terraform'],
+    status: 'IN DEVELOPMENT'
   },
   {
-    id: 'nlp-chatbot',
-    name: 'IZAAN\'S NLP CHATBOT',
-    description: 'Interactive web chatbot using Cohere AI. Flask backend with modern Bootstrap UI for seamless chatting.',
-    types: ['AI/ML', 'FULLSTACK'],
-    githubUrl: 'https://github.com/IzaanQaiser/nlp-chatbot',
-    year: 2024,
-    technologies: ['Python', 'Flask', 'JavaScript', 'Cohere', 'Bootstrap'],
-    featured: true
-  },
-  {
-    id: 'ai-face-detection',
-    name: 'AI FACE DETECTION',
-    description: 'Computer vision project for real-time face detection using machine learning',
-    types: ['AI/ML', 'DESKTOP'],
-    githubUrl: 'https://github.com/IzaanQaiser/AI-FACE-DETECTION',
-    year: 2024,
-    technologies: ['Python', 'OpenCV', 'Machine Learning', 'Computer Vision'],
-    featured: false
-  },
-  {
-    id: 'fake-news-detector',
-    name: 'FAKE NEWS DETECTOR',
-    description: 'LSTM model to accurately detect fake news samples using deep learning',
-    types: ['AI/ML', 'DATA'],
-    githubUrl: 'https://github.com/IzaanQaiser/RNN-LSTM-Fake-News-Detector',
-    year: 2024,
-    technologies: ['Python', 'LSTM', 'Deep Learning', 'NLP'],
-    featured: false
-  },
-  {
-    id: 'dotnet-tetris',
-    name: 'TERRIFIC TETRIS',
-    description: 'Classic Tetris game built with C# and .NET framework',
-    types: ['GAME DEVELOPMENT'],
-    githubUrl: 'https://github.com/IzaanQaiser/.NET-Tetris',
-    year: 2023,
-    technologies: ['C#', '.NET', 'WPF'],
-    featured: false
-  },
-  {
-    id: 'personal-website',
-    name: 'PERSONAL WEBSITE',
-    description: 'Minimal personal website built with Next.js and TypeScript',
-    types: ['WEB'],
-    githubUrl: 'https://github.com/IzaanQaiser/personal-website',
+    id: 'court-vision',
+    name: 'COURT VISION',
+    description: 'An in-development NBA game companion with Sportradar data ingestion and React views for exploring live games and evidence-backed explanations.',
+    types: ['DATA', 'FULLSTACK', 'REAL-TIME'],
+    githubUrl: 'https://github.com/IzaanQaiser/court-vision',
     year: 2025,
-    technologies: ['Next.js', 'TypeScript', 'Tailwind'],
-    featured: false
+    technologies: ['React', 'JavaScript', 'Vite', 'Express', 'Kafka', 'Sportradar'],
+    status: 'IN DEVELOPMENT'
+  },
+  {
+    id: 'scoutreach',
+    name: 'SCOUTREACH',
+    description: 'An in-development backend for job research and outreach, with typed API foundations, relational data models, and durable background jobs.',
+    types: ['DATA', 'FULLSTACK', 'TOOLS'],
+    githubUrl: 'https://github.com/IzaanQaiser/scoutreach',
+    year: 2026,
+    technologies: ['Python', 'FastAPI', 'SQLAlchemy', 'PostgreSQL', 'Alembic', 'pytest'],
+    status: 'IN DEVELOPMENT'
+  },
+  {
+    id: 'personal-mcp-chatbot',
+    name: 'LIFE MCP HUB',
+    description: 'An in-development MCP server and Supabase-backed personal data layer with typed tools for schedules, deadlines, conflicts, email context, and daily briefings.',
+    types: ['AI/ML', 'SYSTEMS', 'TOOLS'],
+    githubUrl: 'https://github.com/IzaanQaiser/personal-mcp-chatbot',
+    year: 2026,
+    technologies: ['TypeScript', 'MCP', 'Supabase', 'PostgreSQL', 'Zod', 'Vitest'],
+    status: 'IN DEVELOPMENT'
+  },
+  {
+    id: 'history-of-mlh',
+    name: "HISTORY OF MLH: A HACKER'S DREAM",
+    description: "An interactive history of Major League Hacking presented through a responsive timeline and an 8-bit side-scrolling game.",
+    types: ['WEB', 'GAME DEVELOPMENT'],
+    devpostUrl: 'https://devpost.com/software/history-of-mlh',
+    year: 2022,
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js'],
+    hackathonWinner: true
+  },
+  {
+    id: 'studious',
+    name: 'STUDIOUS',
+    description: 'A browser-based calendar for adding events and visualizing busy days with a workload heat map.',
+    types: ['WEB', 'EDUCATIONAL'],
+    devpostUrl: 'https://devpost.com/software/studious-v62gmn',
+    year: 2022,
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    hackathonWinner: true
   },
   {
     id: 'homie-hub',
     name: 'HOMIE HUB',
-    description: 'Social platform for connecting with friends and sharing experiences',
+    description: 'A matchmaking video-chat application with user accounts, interest prompts, and mobile access through a Swift WebKit wrapper.',
     types: ['FULLSTACK', 'WEB', 'REAL-TIME'],
-    githubUrl: 'https://github.com/IzaanQaiser/Homie-Hub',
+    devpostUrl: 'https://devpost.com/software/homie-hub',
     year: 2022,
-    technologies: ['HTML', 'CSS', 'JS', 'Agora'],
-    featured: false
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Swift', 'Firebase', 'Agora'],
+    hackathonWinner: true
   },
   {
-    id: 'markbook-assignment',
-    name: 'MARKBOOK ASSIGNMENT',
-    description: 'Educational project for managing student grades and academic records',
-    types: ['EDUCATIONAL', 'DESKTOP'],
-    githubUrl: 'https://github.com/IzaanQaiser/markbookAssignment',
+    id: 'plantup',
+    name: 'PLANTUP',
+    description: 'A plant-care tracker with a searchable catalog, progress timelines, photo logs, and SMS care reminders.',
+    types: ['FULLSTACK', 'WEB'],
+    devpostUrl: 'https://devpost.com/software/plantup',
     year: 2022,
-    technologies: ['C#', '.NET', 'Desktop Application'],
-    featured: false
+    technologies: ['React', 'Tailwind CSS', 'JSON Server', 'Twilio'],
+    hackathonWinner: true
   },
   {
-    id: 'mlh-website',
-    name: 'MLH WEBSITE',
-    description: 'HTML5 canvas boilerplate with ES6 and live-reloading with BrowserSync',
-    types: ['WEB'],
-    githubUrl: 'https://github.com/IzaanQaiser/MLH-Website',
+    id: 'buddy-better-studdy',
+    name: 'BUDDY BETTER STUDDY',
+    description: 'A Chrome extension that tracks visits to user-selected blocked sites during study sessions and responds with preset consequences.',
+    types: ['CHROME EXTENSION', 'EDUCATIONAL', 'TOOLS'],
+    devpostUrl: 'https://devpost.com/software/buddy-better-studdy',
     year: 2022,
-    technologies: ['HTML', 'CSS', 'JS', 'Canvas'],
-    featured: false
-  },
-  {
-    id: 'buddy-better-study',
-    name: 'BUDDY BETTER STUDY',
-    description: 'Study companion application for better learning and productivity',
-    types: ['CHROME EXTENSION', 'WEB'],
-    githubUrl: 'https://github.com/IzaanQaiser/buddybetterstuddy',
-    year: 2022,
-    technologies: ['HTML', 'CSS', 'JS', 'JSON'],
-    featured: false
-  },
-  {
-    id: 'delta-blade',
-    name: 'DELTA BLADE',
-    description: 'Game development project built with C#',
-    types: ['GAME DEVELOPMENT'],
-    githubUrl: 'https://github.com/IzaanQaiser/DeltaBlade',
-    year: 2022,
-    technologies: ['C#', 'Godot'],
-    featured: false
+    technologies: ['HTML', 'CSS', 'JavaScript', 'JSON'],
+    hackathonWinner: true
   }
 ]
 
-export const getFeaturedProjects = (): Project[] => {
-  return projects.filter(project => project.featured)
+export const getProjectPrimaryUrl = (project: Project): string => {
+  return project.githubUrl ?? project.devpostUrl ?? project.liveUrl ?? '#'
 }
 
-export const getProjectsByType = (type: ProjectType): Project[] => {
-  return projects.filter(project => project.types.includes(type))
+export const getFeaturedProjects = (): Project[] => {
+  return projects.filter(project => project.featured)
 }
 
 export const getAllProjectTypes = (): ProjectType[] => {

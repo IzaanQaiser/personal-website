@@ -3,8 +3,15 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Izaan Qaiser',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  description: 'Izaan Qaiser is a Computer Engineering student at the University of Waterloo building production software, agent systems, and data infrastructure.',
+  metadataBase: new URL('https://izaanq.com'),
+  openGraph: {
+    title: 'Izaan Qaiser',
+    description: 'Izaan Qaiser is a Computer Engineering student at the University of Waterloo building production software, agent systems, and data infrastructure.',
+    url: '/',
+    siteName: 'Izaan Qaiser',
+    type: 'website',
+  },
   icons: {
     icon: '/favicon.png',
     apple: [

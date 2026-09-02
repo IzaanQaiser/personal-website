@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { projects, projectTagStyle, getAllProjectTypes, type Project, type ProjectType } from "@/lib/projects"
+import { getAllProjectTypes, getProjectPrimaryUrl, projects, projectTagStyle, type ProjectType } from "@/lib/projects"
 
 export default function ProjectsPage() {
   const [selectedType, setSelectedType] = useState<ProjectType | "ALL">("ALL")
@@ -65,11 +65,12 @@ export default function ProjectsPage() {
         {/* Projects Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project) => {
-            const isHackathonWinner = project.id === 'buddy-better-study' || project.id === 'mlh-website' || project.id === 'homie-hub'
+            const isHackathonWinner = project.hackathonWinner === true
+            const primaryUrl = getProjectPrimaryUrl(project)
             return (
               <div
                 key={project.id}
-                onClick={() => window.open(project.githubUrl, '_blank')}
+                onClick={() => window.open(primaryUrl, '_blank', 'noopener,noreferrer')}
                 className={`cursor-pointer bg-zinc-900/30 border rounded-lg p-6 transition-colors duration-200 ${
                   isHackathonWinner 
                     ? 'border-yellow-500/50 hover:border-yellow-400/70 shadow-lg shadow-yellow-500/10' 
@@ -82,9 +83,10 @@ export default function ProjectsPage() {
                 <div className="mb-3">
                   <h3 className="text-lg font-mono text-zinc-100 mb-2">
                     <a
-                      href={project.githubUrl}
+                      href={primaryUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(event) => event.stopPropagation()}
                       className={`transition-colors duration-200 ${
                         isHackathonWinner 
                           ? 'hover:text-yellow-400' 
@@ -122,11 +124,15 @@ export default function ProjectsPage() {
                 
                 <div className="flex items-center justify-between text-xs text-zinc-500 font-mono">
                   <span>{project.year}</span>
+                  {project.status && (
+                    <span>{project.status}</span>
+                  )}
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(event) => event.stopPropagation()}
                       className="hover:text-blue-900 transition-colors duration-200"
                     >
                       LIVE DEMO

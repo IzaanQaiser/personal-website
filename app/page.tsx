@@ -1,10 +1,61 @@
 "use client"
 
-import { SlideIn } from "@/components/slide-in"
 import { AchievementsCarousel } from "@/components/achievements-carousel"
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { getFeaturedProjects, projectTagStyle, type Project } from "@/lib/projects"
+import { getFeaturedProjects, getProjectPrimaryUrl, projectTagStyle } from "@/lib/projects"
+
+const experiences = [
+  {
+    title: "Incoming Software Developer",
+    organization: "Knowledge in Development Inc. / Language Use Inventory",
+    dates: "Sep 2026 – Dec 2026",
+    technologies: "JavaScript • HTML/CSS • client-side web • accessibility • software architecture",
+    description: "Incoming role focused on redesigning and prototyping a privacy-conscious digital administration and scoring workflow for the Language Use Inventory, with emphasis on software architecture, accessibility, usability, and long-term maintainability."
+  },
+  {
+    title: "Founding Software Engineer",
+    organization: "Pada Guidance",
+    dates: "Apr 2026 – Present",
+    technologies: "React Native • TypeScript • Python • FastAPI • PostgreSQL/PostGIS • AWS",
+    description: "Built and shipped a React Native application to a 100+ driver external beta and backend systems serving lane-level guidance across 200K+ road points and 1,200+ km."
+  },
+  {
+    title: "Software Engineering Intern",
+    organization: "Ontario Institute for Cancer Research",
+    dates: "Jan 2026 – Apr 2026",
+    technologies: "TypeScript • Next.js • React • Node.js • PostgreSQL",
+    description: "Designed and shipped an account-ownership transfer workflow spanning 3 production systems, cutting manual processing time by 80%."
+  },
+  {
+    title: "Full-Stack Software Engineering Intern",
+    organization: "Virtek Vision International",
+    dates: "May 2025 – Aug 2025",
+    technologies: "React • TypeScript • C# • RabbitMQ • REST APIs • Playwright",
+    description: "Shipped 50+ production fixes to software used in aerospace and manufacturing environments including SpaceX, Boeing, and Formula 1 teams, while redesigning RabbitMQ and REST workflows across the C# backend."
+  },
+  {
+    title: "Data Engineering Intern",
+    organization: "Definity Financial",
+    dates: "Sep 2024 – Dec 2024",
+    technologies: "Python • Airflow • BigQuery • GCP",
+    description: "Built and optimized Python, Airflow, and BigQuery ETL workflows on GCP, reducing pipeline latency by 91% and increasing throughput 3x."
+  },
+  {
+    title: "Vice President, Engineering",
+    organization: "UW Muslim Students' Association",
+    dates: "Sep 2023 – Present",
+    technologies: "Python • LangChain • Supabase • pgvector • GCP",
+    description: "Lead a 6-developer engineering team responsible for production internal systems, including a RAG-based knowledge assistant and organization tooling."
+  },
+  {
+    title: "Data Analysis Intern",
+    organization: "University of Waterloo, Faculty of Engineering Graduate Studies Office",
+    dates: "Jan 2024 – Apr 2024",
+    technologies: "Python • Excel",
+    description: "Analyzed graduate supervision, funding, and student-output data and replaced manual professor-capacity counting with reusable analysis workflows."
+  }
+]
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState("")
@@ -63,29 +114,12 @@ export default function Home() {
 
         {/* Main Content */}
         <div className="space-y-6 text-lg md:text-xl leading-relaxed">
-          <>
-            <p>
-              I'm a 2nd year Computer Engineering student at the University of Waterloo, currently building{" "}
-              <a
-                href="https://thinkback.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline decoration-zinc-600 hover:decoration-blue-900 hover:text-blue-900 transition-colors duration-200 underline-offset-4"
-              >
-                thinkback
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://speedthreads.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline decoration-zinc-600 hover:decoration-blue-900 hover:text-blue-900 transition-colors duration-200 underline-offset-4"
-              >
-                speedthreads
-              </a>{" "}
-              — two future unicorn startups that I'm excited to see grow.
-            </p>
-          </>
+          <p>
+            Computer Engineering student at the University of Waterloo building production software, agent systems, and data infrastructure.
+          </p>
+          <p className="text-zinc-400">
+            Available for Winter 2027 software engineering internships.
+          </p>
 
           {/* <>
             <p>
@@ -145,7 +179,7 @@ export default function Home() {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1 flex-wrap">
                         <a
-                          href={project.githubUrl}
+                          href={getProjectPrimaryUrl(project)}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-zinc-100 hover:text-blue-900 transition-colors duration-200 underline decoration-zinc-600 hover:decoration-blue-900 underline-offset-4"
@@ -204,55 +238,19 @@ export default function Home() {
               </a>
             </div>
             <div className="space-y-6">
-              <div className="space-y-2">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="text-zinc-100 font-mono text-lg">Full-Stack Developer</h3>
-                    <p className="text-zinc-400 text-sm">Virtek Vision International</p>
+              {experiences.map((experience) => (
+                <div key={`${experience.organization}-${experience.dates}`} className="space-y-2">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start">
+                    <div>
+                      <h3 className="text-zinc-100 font-mono text-lg">{experience.title}</h3>
+                      <p className="text-zinc-400 text-sm">{experience.organization}</p>
+                    </div>
+                    <span className="text-zinc-500 text-xs font-mono shrink-0">{experience.dates}</span>
                   </div>
-                  <span className="text-zinc-500 text-xs font-mono">May 2025 – Aug 2025</span>
+                  <p className="text-zinc-500 text-xs font-mono">{experience.technologies}</p>
+                  <p className="text-zinc-400 text-sm">{experience.description}</p>
                 </div>
-                <p className="text-zinc-500 text-xs font-mono">Technologies: React Native, TypeScript, JavaScript, C#, RabbitMQ, REST API, SQL, Playwright</p>
-                <p className="text-zinc-400 text-sm">Rebuilt prototype into stable cross-platform app, reducing crashes by 95% for F1 and BMW.</p>
-              </div>
-
-              <div className="space-y-2">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="text-zinc-100 font-mono text-lg">Data Engineer</h3>
-                    <p className="text-zinc-400 text-sm">Definity</p>
-                  </div>
-                  <span className="text-zinc-500 text-xs font-mono">Sep 2024 – Dec 2024</span>
-                </div>
-                <p className="text-zinc-500 text-xs font-mono">Technologies: Python, Airflow, BigQuery, Google Cloud</p>
-                <p className="text-zinc-400 text-sm">Engineered optimized DAG reducing pipeline latency by 91% and increased data throughput by 3x.</p>
-              </div>
-
-              <div className="space-y-2">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="text-zinc-100 font-mono text-lg">Data Analyst</h3>
-                    <p className="text-zinc-400 text-sm">University of Waterloo</p>
-                  </div>
-                  <span className="text-zinc-500 text-xs font-mono">Jan 2024 – Apr 2024</span>
-                </div>
-                <p className="text-zinc-500 text-xs font-mono">Technologies: Python, Pandas, numpy, JavaScript</p>
-                <p className="text-zinc-400 text-sm">Built Python data pipeline achieving 23.5x speedup and optimized website cutting load times by 59%.</p>
-              </div>
-
-              <div className="space-y-2">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="text-zinc-100 font-mono text-lg">AI Developer</h3>
-                    <p className="text-zinc-400 text-sm">Outlier</p>
-                  </div>
-                  <span className="text-zinc-500 text-xs font-mono">Nov 2024 – Present</span>
-                </div>
-                <p className="text-zinc-500 text-xs font-mono">Technologies: AI/ML, Python, C#, Machine Learning</p>
-                <p className="text-zinc-400 text-sm">Developing AI solutions and machine learning models for various applications in a remote contract role.
-
-</p>
-              </div>
+              ))}
             </div>
           </div>
         </>
@@ -264,14 +262,14 @@ export default function Home() {
 
         {/* Social Links */}
         <>
-          <div className="flex justify-center gap-6 text-sm font-mono">
+          <div className="flex flex-wrap justify-center gap-6 text-sm font-mono">
             <a
               href="https://x.com/1zaanq"
               target="_blank"
               rel="noopener noreferrer"
               className="text-zinc-400 hover:text-blue-900 underline decoration-zinc-700 hover:decoration-blue-900 transition-colors duration-200 underline-offset-4"
             >
-              TWITTER/X
+              X
             </a>
             <a
               href="https://www.linkedin.com/in/izaanq/"
@@ -289,19 +287,19 @@ export default function Home() {
             >
               GITHUB
             </a>
-          </div>
-        </>
-
-        {/* Website Inspiration */}
-        <>
-          <div className="flex justify-center mt-8">
             <a
-              href="https://roozbehali.com/"
+              href="https://devpost.com/izaanqaiser05"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-500 hover:text-zinc-300 text-xs font-mono transition-colors duration-200"
+              className="text-zinc-400 hover:text-blue-900 underline decoration-zinc-700 hover:decoration-blue-900 transition-colors duration-200 underline-offset-4"
             >
-              website inspiration
+              DEVPOST
+            </a>
+            <a
+              href="mailto:i2qaiser@uwaterloo.ca"
+              className="text-zinc-400 hover:text-blue-900 underline decoration-zinc-700 hover:decoration-blue-900 transition-colors duration-200 underline-offset-4"
+            >
+              EMAIL
             </a>
           </div>
         </>
