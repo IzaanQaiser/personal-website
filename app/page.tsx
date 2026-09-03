@@ -8,52 +8,38 @@ import { getFeaturedProjects, getProjectPrimaryUrl, projectTagStyle } from "@/li
 const experiences = [
   {
     title: "Software Developer (Incoming)",
-    organization: "Knowledge in Development Inc. / Language Use Inventory",
-    dates: "Sep 2026 – Dec 2026",
-    technologies: "JavaScript • HTML/CSS • client-side web • accessibility • software architecture",
-    description: "Incoming role focused on redesigning and prototyping a privacy-conscious digital administration and scoring workflow for the Language Use Inventory, with emphasis on software architecture, accessibility, usability, and long-term maintainability."
+    organization: "Knowledge in Development Inc: Language Use Inventory",
+    dates: "Sep 2026 – Dec 2026"
   },
   {
     title: "Founding Software Engineer",
     organization: "Pada Guidance",
-    dates: "Apr 2026 – Present",
-    technologies: "React Native • TypeScript • Python • FastAPI • PostgreSQL/PostGIS • AWS",
-    description: "Built and shipped a React Native application to a 100+ driver external beta and backend systems serving lane-level guidance across 200K+ road points and 1,200+ km."
+    dates: "Apr 2026 – Present"
   },
   {
     title: "Software Engineering Intern",
     organization: "Ontario Institute for Cancer Research",
-    dates: "Jan 2026 – Apr 2026",
-    technologies: "TypeScript • Next.js • React • Node.js • PostgreSQL",
-    description: "Designed and shipped an account-ownership transfer workflow spanning 3 production systems, cutting manual processing time by 80%."
+    dates: "Jan 2026 – Apr 2026"
   },
   {
     title: "Full-Stack Software Engineering Intern",
     organization: "Virtek Vision International",
-    dates: "May 2025 – Aug 2025",
-    technologies: "React • TypeScript • C# • RabbitMQ • REST APIs • Playwright",
-    description: "Shipped 50+ production fixes to software used in aerospace and manufacturing environments including SpaceX, Boeing, and Formula 1 teams, while redesigning RabbitMQ and REST workflows across the C# backend."
+    dates: "May 2025 – Aug 2025"
   },
   {
     title: "Data Engineering Intern",
     organization: "Definity Financial",
-    dates: "Sep 2024 – Dec 2024",
-    technologies: "Python • Airflow • BigQuery • GCP",
-    description: "Built and optimized Python, Airflow, and BigQuery ETL workflows on GCP, reducing pipeline latency by 91% and increasing throughput 3x."
+    dates: "Sep 2024 – Dec 2024"
   },
   {
     title: "Vice President, Engineering",
     organization: "UW Muslim Students' Association",
-    dates: "Sep 2023 – Present",
-    technologies: "Python • LangChain • Supabase • pgvector • GCP",
-    description: "Lead a 6-developer engineering team responsible for production internal systems, including a RAG-based knowledge assistant and organization tooling."
+    dates: "Sep 2023 – Present"
   },
   {
     title: "Data Analysis Intern",
     organization: "University of Waterloo, Faculty of Engineering Graduate Studies Office",
-    dates: "Jan 2024 – Apr 2024",
-    technologies: "Python • Excel",
-    description: "Analyzed graduate supervision, funding, and student-output data and replaced manual professor-capacity counting with reusable analysis workflows."
+    dates: "Jan 2024 – Apr 2024"
   }
 ]
 
@@ -247,8 +233,6 @@ export default function Home() {
                     </div>
                     <span className="text-zinc-500 text-xs font-mono shrink-0">{experience.dates}</span>
                   </div>
-                  <p className="text-zinc-500 text-xs font-mono">{experience.technologies}</p>
-                  <p className="text-zinc-400 text-sm">{experience.description}</p>
                 </div>
               ))}
             </div>
