@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { ShaderGradientBackground } from "@/components/shader-gradient-background"
 import { getAllProjectTypes, getProjectPrimaryUrl, projects, projectTagStyle, type ProjectType } from "@/lib/projects"
 
 export default function ProjectsPage() {
@@ -14,8 +13,7 @@ export default function ProjectsPage() {
     : projects.filter(project => project.types.includes(selectedType))
 
   return (
-    <div className="relative min-h-screen bg-zinc-950 text-zinc-100 p-8 md:p-8 lg:p-16 pb-16">
-      <ShaderGradientBackground />
+    <div className="relative min-h-screen text-zinc-100 p-8 md:p-8 lg:p-16 pb-16">
       <div className="relative z-10 max-w-4xl mx-auto space-y-8">
         {/* Header */}
         <div className="flex justify-center">

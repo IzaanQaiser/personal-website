@@ -1,6 +1,5 @@
 "use client"
 
-import { ShaderGradientBackground } from "@/components/shader-gradient-background"
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { getFeaturedProjects, getProjectPrimaryUrl, projectTagStyle } from "@/lib/projects"
@@ -74,8 +73,7 @@ export default function Home() {
   }
 
   return (
-    <div className="relative min-h-screen bg-zinc-950 text-zinc-100">
-      <ShaderGradientBackground />
+    <div className="relative min-h-screen text-zinc-100">
       <div className="relative z-10">
         <div className="p-8 md:p-8 lg:p-16 pb-16">
           <div className="max-w-2xl mx-auto space-y-8">
