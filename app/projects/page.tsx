@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { ShaderGradientBackground } from "@/components/shader-gradient-background"
 import { getAllProjectTypes, getProjectPrimaryUrl, projects, projectTagStyle, type ProjectType } from "@/lib/projects"
 
 export default function ProjectsPage() {
@@ -13,17 +14,14 @@ export default function ProjectsPage() {
     : projects.filter(project => project.types.includes(selectedType))
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 p-8 md:p-8 lg:p-16 pb-16">
-      <div className="max-w-4xl mx-auto space-y-8">
+    <div className="relative min-h-screen bg-zinc-950 text-zinc-100 p-8 md:p-8 lg:p-16 pb-16">
+      <ShaderGradientBackground />
+      <div className="relative z-10 max-w-4xl mx-auto space-y-8">
         {/* Header */}
         <div className="flex justify-center">
           <div>
             <h1
               className="text-4xl md:text-5xl font-mono tracking-tight mb-4 mt-1 text-center"
-              style={{
-                textShadow:
-                  "0 0 15px rgba(255, 255, 255, 0.6), 0 0 90px rgba(255, 255, 255, 0.3), 0 0 90px rgba(255, 255, 255, 0.1)",
-              }}
             >
               Projects
             </h1>
@@ -92,9 +90,6 @@ export default function ProjectsPage() {
                           ? 'hover:text-yellow-400' 
                           : 'hover:text-blue-900'
                       }`}
-                      style={isHackathonWinner ? {
-                        textShadow: '0 0 10px rgba(255, 215, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.1)'
-                      } : {}}
                     >
                       {project.name}
                       {isHackathonWinner && <span className="ml-2 text-yellow-400">🏆</span>}

@@ -42,7 +42,7 @@ export const projects: Project[] = [
     types: ['AI/ML', 'DESKTOP', 'TOOLS'],
     devpostUrl: 'https://devpost.com/software/ock',
     year: 2026,
-    technologies: ['Gemini', 'ElevenLabs', 'Swift', 'Wispr'],
+    technologies: ['Gemini', 'ElevenLabs', 'Swift', 'Wispr Flow'],
     featured: true
   },
   {
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     types: ['AI/ML', 'FULLSTACK', 'CHROME EXTENSION'],
     githubUrl: 'https://github.com/IzaanQaiser/speed-threads',
     year: 2025,
-    technologies: ['React', 'TypeScript', 'Chrome MV3', 'Python', 'FastAPI', 'PostgreSQL', 'Supabase', 'OpenAI API'],
+    technologies: ['React', 'TypeScript', 'MV3', 'Python', 'FastAPI', 'PostgreSQL', 'Supabase', 'OpenAI API'],
     featured: true
   },
   {

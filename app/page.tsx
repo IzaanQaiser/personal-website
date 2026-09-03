@@ -1,6 +1,6 @@
 "use client"
 
-import { AchievementsCarousel } from "@/components/achievements-carousel"
+import { ShaderGradientBackground } from "@/components/shader-gradient-background"
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import { getFeaturedProjects, getProjectPrimaryUrl, projectTagStyle } from "@/lib/projects"
@@ -74,21 +74,16 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100">
-      {/* Achievements Carousel Banner */}
-      <AchievementsCarousel />
-      
-      <div className="p-8 md:p-8 lg:p-16 pb-16">
-        <div className="max-w-2xl mx-auto space-y-8">
+    <div className="relative min-h-screen bg-zinc-950 text-zinc-100">
+      <ShaderGradientBackground />
+      <div className="relative z-10">
+        <div className="p-8 md:p-8 lg:p-16 pb-16">
+          <div className="max-w-2xl mx-auto space-y-8">
         {/* Header */}
         <div className="flex justify-center">
           <div>
             <h1
               className="text-4xl md:text-5xl font-mono tracking-tight mb-4 mt-1"
-              style={{
-                textShadow:
-                  "0 0 15px rgba(255, 255, 255, 0.6), 0 0 90px rgba(255, 255, 255, 0.3), 0 0 90px rgba(255, 255, 255, 0.1)",
-              }}
             >
               Izaan Qaiser
             </h1>
@@ -135,6 +130,43 @@ export default function Home() {
           </> */}
         </div>
 
+        {/* Experience Section */}
+        <>
+        <br />
+        <br />
+
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <h2
+                className="text-2xl md:text-3xl font-mono text-zinc-300 underline decoration-zinc-600 underline-offset-8"
+              >
+                Experience
+              </h2>
+              <a
+                href="https://www.linkedin.com/in/izaanq/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-500 hover:text-blue-900 transition-colors duration-200 underline decoration-zinc-700 hover:decoration-blue-900 underline-offset-4 text-sm font-mono"
+              >
+                View All →
+              </a>
+            </div>
+            <div className="space-y-6">
+              {experiences.map((experience) => (
+                <div key={`${experience.organization}-${experience.dates}`} className="space-y-2">
+                  <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start">
+                    <div>
+                      <h3 className="text-zinc-100 font-mono text-lg">{experience.title}</h3>
+                      <p className="text-zinc-400 text-sm">{experience.organization}</p>
+                    </div>
+                    <span className="text-zinc-500 text-xs font-mono shrink-0">{experience.dates}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </>
+
         {/* Projects Section */}
         <>
         <br />
@@ -144,10 +176,6 @@ export default function Home() {
             <div className="flex items-center justify-between mb-6">
               <h2
                 className="text-2xl md:text-3xl font-mono text-zinc-300 underline decoration-zinc-600 underline-offset-8"
-                style={{
-                  textShadow:
-                    "0 0 25px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.3), 0 0 75px rgba(255, 255, 255, 0.1)",
-                }}
               >
                 Projects
               </h2>
@@ -194,47 +222,6 @@ export default function Home() {
                   </div>
                 )
               })}
-            </div>
-          </div>
-        </>
-
-        {/* Experience Section */}
-        <>
-        <br />
-        <br />
-
-          <div>
-            <div className="flex items-center justify-between mb-6">
-              <h2
-                className="text-2xl md:text-3xl font-mono text-zinc-300 underline decoration-zinc-600 underline-offset-8"
-                style={{
-                  textShadow:
-                    "0 0 25px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.3), 0 0 75px rgba(255, 255, 255, 0.1)",
-                }}
-              >
-                Experience
-              </h2>
-              <a
-                href="https://www.linkedin.com/in/izaanq/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zinc-500 hover:text-blue-900 transition-colors duration-200 underline decoration-zinc-700 hover:decoration-blue-900 underline-offset-4 text-sm font-mono"
-              >
-                View All →
-              </a>
-            </div>
-            <div className="space-y-6">
-              {experiences.map((experience) => (
-                <div key={`${experience.organization}-${experience.dates}`} className="space-y-2">
-                  <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start">
-                    <div>
-                      <h3 className="text-zinc-100 font-mono text-lg">{experience.title}</h3>
-                      <p className="text-zinc-400 text-sm">{experience.organization}</p>
-                    </div>
-                    <span className="text-zinc-500 text-xs font-mono shrink-0">{experience.dates}</span>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </>
@@ -287,6 +274,7 @@ export default function Home() {
             </a>
           </div>
         </>
+          </div>
         </div>
       </div>
     </div>
