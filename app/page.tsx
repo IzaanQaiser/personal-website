@@ -224,54 +224,6 @@ export default function Home() {
           </div>
         </>
 
-        {/* Divider */}
-        <>
-          <div className="border-t border-zinc-800 my-8"></div>
-        </>
-
-        {/* Social Links */}
-        <>
-          <div className="flex flex-wrap justify-center gap-6 text-sm font-mono">
-            <a
-              href="https://x.com/1zaanq"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-blue-900 underline decoration-zinc-700 hover:decoration-blue-900 transition-colors duration-200 underline-offset-4"
-            >
-              X
-            </a>
-            <a
-              href="https://www.linkedin.com/in/izaanq/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-blue-900 underline decoration-zinc-700 hover:decoration-blue-900 transition-colors duration-200 underline-offset-4"
-            >
-              LINKEDIN
-            </a>
-            <a
-              href="https://github.com/IzaanQaiser"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-blue-900 underline decoration-zinc-700 hover:decoration-blue-900 transition-colors duration-200 underline-offset-4"
-            >
-              GITHUB
-            </a>
-            <a
-              href="https://devpost.com/izaanqaiser05"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-blue-900 underline decoration-zinc-700 hover:decoration-blue-900 transition-colors duration-200 underline-offset-4"
-            >
-              DEVPOST
-            </a>
-            <a
-              href="mailto:i2qaiser@uwaterloo.ca"
-              className="text-zinc-400 hover:text-blue-900 underline decoration-zinc-700 hover:decoration-blue-900 transition-colors duration-200 underline-offset-4"
-            >
-              EMAIL
-            </a>
-          </div>
-        </>
           </div>
         </div>
       </div>

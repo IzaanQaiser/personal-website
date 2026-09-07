@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ShaderGradientBackground } from '@/components/shader-gradient-background'
+import { SiteNav } from '@/components/site-nav'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -30,7 +31,8 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-zinc-950">
         <ShaderGradientBackground />
-        <div className="relative z-10">{children}</div>
+        <SiteNav />
+        <main className="relative z-10">{children}</main>
       </body>
     </html>
   )

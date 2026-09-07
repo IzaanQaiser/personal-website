@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Link from "next/link"
 import { getAllProjectTypes, getProjectPrimaryUrl, projects, projectTagStyle, type ProjectType } from "@/lib/projects"
 
 export default function ProjectsPage() {
@@ -144,15 +143,6 @@ export default function ProjectsPage() {
           })}
         </div>
 
-        {/* Back to Home */}
-        <div className="flex justify-center pt-8">
-          <Link
-            href="/"
-            className="text-zinc-400 hover:text-blue-900 transition-colors duration-200 underline decoration-zinc-700 hover:decoration-blue-900 underline-offset-4 font-mono"
-          >
-            ← Back to Home
-          </Link>
-        </div>
       </div>
     </div>
   )
