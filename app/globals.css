@@ -119,3 +119,7 @@ html {
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+
+.liquid-navbar ~ span {
+  display: none;
+}

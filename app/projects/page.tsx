@@ -12,7 +12,7 @@ export default function ProjectsPage() {
     : projects.filter(project => project.types.includes(selectedType))
 
   return (
-    <div className="relative min-h-screen text-zinc-100 p-8 md:p-8 lg:p-16 pb-16">
+    <div className="relative min-h-screen px-8 pb-16 pt-0 text-zinc-100 md:px-8 lg:px-16">
       <div className="relative z-10 max-w-4xl mx-auto space-y-8">
         {/* Header */}
         <div className="flex justify-center">

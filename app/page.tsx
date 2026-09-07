@@ -75,7 +75,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen text-zinc-100">
       <div className="relative z-10">
-        <div className="p-8 md:p-8 lg:p-16 pb-16">
+        <div className="px-8 pb-16 pt-0 md:px-8 lg:px-16">
           <div className="max-w-2xl mx-auto space-y-8">
         {/* Header */}
         <div className="flex justify-center">
