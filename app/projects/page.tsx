@@ -32,10 +32,10 @@ export default function ProjectsPage() {
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           <button
             onClick={() => setSelectedType("ALL")}
-            className={`px-4 py-2 text-sm font-mono rounded border transition-colors duration-200 ${
+            className={`rounded px-4 py-2 font-mono text-sm backdrop-blur-xl transition-all duration-200 ${
               selectedType === "ALL"
-                ? "bg-zinc-800 text-zinc-100 border-zinc-600"
-                : "bg-zinc-900/50 text-zinc-400 border-zinc-700 hover:border-zinc-600 hover:text-zinc-300"
+                ? "bg-white/20 text-zinc-100 shadow-[0_4px_16px_rgba(0,0,0,0.16)]"
+                : "bg-white/[0.08] text-zinc-300 shadow-[0_4px_16px_rgba(0,0,0,0.12)] hover:bg-white/[0.14]"
             }`}
           >
             ALL
@@ -45,10 +45,10 @@ export default function ProjectsPage() {
               <button
                 key={type}
                 onClick={() => setSelectedType(type)}
-                className={`px-4 py-2 text-sm font-mono rounded border transition-colors duration-200 ${
+                className={`rounded px-4 py-2 font-mono text-sm backdrop-blur-xl transition-all duration-200 ${
                   selectedType === type
-                    ? `${projectTagStyle.bgColor} ${projectTagStyle.color} border-current`
-                    : "bg-zinc-900/50 text-zinc-400 border-zinc-700 hover:border-zinc-600 hover:text-zinc-300"
+                    ? "bg-white/20 text-zinc-100 shadow-[0_4px_16px_rgba(0,0,0,0.16)]"
+                    : "bg-white/[0.08] text-zinc-300 shadow-[0_4px_16px_rgba(0,0,0,0.12)] hover:bg-white/[0.14]"
                 }`}
               >
                 {type}
@@ -66,14 +66,11 @@ export default function ProjectsPage() {
               <div
                 key={project.id}
                 onClick={() => window.open(primaryUrl, '_blank', 'noopener,noreferrer')}
-                className={`cursor-pointer bg-zinc-900/30 border rounded-lg p-6 transition-colors duration-200 ${
+                className={`cursor-pointer rounded-lg p-6 backdrop-blur-xl transition-all duration-200 ${
                   isHackathonWinner 
-                    ? 'border-yellow-500/50 hover:border-yellow-400/70 shadow-lg shadow-yellow-500/10' 
-                    : 'border-zinc-800 hover:border-zinc-700'
+                    ? 'bg-yellow-300/[0.10] shadow-[0_12px_36px_rgba(234,179,8,0.10)] hover:bg-yellow-300/[0.14]'
+                    : 'bg-white/[0.07] shadow-[0_12px_36px_rgba(0,0,0,0.16)] hover:bg-white/[0.11]'
                 }`}
-                style={isHackathonWinner ? {
-                  boxShadow: '0 0 20px rgba(255, 215, 0, 0.1), 0 0 40px rgba(255, 215, 0, 0.05), inset 0 1px 0 rgba(255, 215, 0, 0.1)'
-                } : {}}
               >
                 <div className="mb-3">
                   <h3 className="text-lg font-mono text-zinc-100 mb-2">
