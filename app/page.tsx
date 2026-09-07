@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { getFeaturedProjects, getProjectPrimaryUrl, projectTagStyle } from "@/lib/projects"
+import { getFeaturedProjects, getProjectPrimaryUrl } from "@/lib/projects"
 
 const experiences = [
   {
@@ -202,7 +202,7 @@ export default function Home() {
                           {project.types.map((type) => (
                             <span
                               key={type}
-                              className={`px-2 py-1 text-xs font-mono rounded border ${projectTagStyle.bgColor} ${projectTagStyle.color}`}
+                              className="rounded bg-white/[0.08] px-3 py-1.5 font-mono text-xs text-zinc-300 shadow-[0_4px_16px_rgba(0,0,0,0.12)] backdrop-blur-xl"
                             >
                               {type}
                             </span>
