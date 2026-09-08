@@ -81,7 +81,7 @@ export function SiteNav() {
         <nav
           ref={setNavRef}
           aria-label="Primary navigation"
-          className="relative flex items-center whitespace-nowrap font-mono text-xs sm:text-sm"
+          className="relative flex items-center whitespace-nowrap font-mono text-[10px] sm:text-sm"
         >
           <span
             aria-hidden="true"
@@ -99,14 +99,14 @@ export function SiteNav() {
               link.href === "/"
                 ? pathname === "/"
                 : link.href === "/projects" && pathname.startsWith("/projects")
-            const linkClassName = `relative z-10 rounded-full px-3 py-2 transition-opacity duration-200 hover:opacity-100 ${
+            const linkClassName = `relative z-10 rounded-full px-1 py-2 transition-opacity duration-200 hover:opacity-100 sm:px-3 ${
               isActive ? "opacity-100" : "opacity-80"
             }`
 
             return (
               <span key={link.label} className="flex items-center">
                 {index > 0 && (
-                  <span aria-hidden="true" className="mx-2 opacity-40 sm:mx-3">
+                  <span aria-hidden="true" className="mx-3 hidden opacity-40 sm:inline">
                     //
                   </span>
                 )}
